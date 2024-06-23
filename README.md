@@ -5,7 +5,7 @@
 
 ![WhatsApp Image 2024-06-23 at 12 07 37 PM](https://github.com/sakthispgs/VSDsquadronmini_intern/assets/157115078/eb05f13c-0acb-4d20-b5cd-9c287286f0ac)
 
-## Features
+### Features
 ___
 
 + 32-bit RISC-V2A processor, supporting 2 levels of interrupt nesting
