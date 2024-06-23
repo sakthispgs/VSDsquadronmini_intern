@@ -60,4 +60,6 @@ $ riscv64-unknown-elf-objdump -d filename.o | less
 ```
 ![Assembly code for Ofast command](https://github.com/sakthispgs/VSDsquadronmini_intern/assets/157115078/cdea39c3-8202-4fe5-985e-a7c7fcd53955)
 
+---
 **END OF TASK-1**
+---
