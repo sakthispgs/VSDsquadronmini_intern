@@ -25,6 +25,6 @@ ___
 + 1-wire serial debug interface (SDI)
 ---
 
-##Task 1:
+## Task 1:
 __The task is to install the necessary tools for this internship such as Ubuntu on VMBox, Visual C++ and write a sample C code and analysing RISC asssemby code for the sample C code.__
 
