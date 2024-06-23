@@ -32,4 +32,32 @@ Writing a C code to count sum of numbers from 1 to n using Leafpad as shown belo
 
 ![sample C program on Leafpad](https://github.com/sakthispgs/VSDsquadronmini_intern/assets/157115078/1a3edd12-338c-4ba9-9af9-a55d7460c0c1)
 ---
+
+ #### Running above program in RISC-V Simulator
++ Command for Compiling the Code using RISCV Compiler.
 ```
+$ riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o filename.o filename.c
+$ ls -ltr filename.o
+```
+
+![RISC-V based simulation](https://github.com/sakthispgs/VSDsquadronmini_intern/assets/157115078/e43f4690-3310-4e73-8f4f-4a27d3f25827)
+
+---
++ Assembly code for C program
+```
+$ riscv64-unknown-elf-objdump -d filename.o 
+$ riscv64-unknown-elf-objdump -d filename.o | less
+```
+
+![Assembly code for C](https://github.com/sakthispgs/VSDsquadronmini_intern/assets/157115078/c36ebd0c-0b25-4037-97e6-ad018414bb42)
+
+---
+
++ Assembly code for Ofast command
+```
+$ riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o filename.o filename.c
+$ riscv64-unknown-elf-objdump -d filename.o | less 
+```
+![Assembly code for Ofast command](https://github.com/sakthispgs/VSDsquadronmini_intern/assets/157115078/cdea39c3-8202-4fe5-985e-a7c7fcd53955)
+
+                       **END OF TASK-1**
