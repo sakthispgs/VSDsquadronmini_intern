@@ -24,4 +24,9 @@ ___
 + 64-bit chip unique ID
 + 1-wire serial debug interface (SDI)
 ---
-_The VSDSquadron Mini RISC-V SoC device available on the development board is programmed using the on-board flash programmer which supports the CH32V305FBP6 single-wire programming protocol, enabling streamlined and efficient development workflows directly on the board. Connect the VSDSquadron Mini board using a USB C connector to program the CH32V003F4U6 chip._
+
+### [Custom containers](https://github.com/markdown-it/markdown-it-container)
+
+::: warning
+*The VSDSquadron Mini RISC-V SoC device available on the development board is programmed using the on-board flash programmer which supports the CH32V305FBP6 single-wire programming protocol, enabling streamlined and efficient development workflows directly on the board. Connect the VSDSquadron Mini board using a USB C connector to program the CH32V003F4U6 chip.*
+:::
