@@ -28,7 +28,7 @@ ___
 ## Task 1:
 __The task is to install the necessary tools for this internship such as Ubuntu on VMBox, Visual C++ and write a sample C code and analysing RISC asssemby code for the sample C code.__
 ___
-Writing a C code to count sum of numbers from 1 to n using Leafpad as shown below.
++ Writing a C code to count sum of numbers from 1 to n using Leafpad as shown below.
 
 ![sample C program on Leafpad](https://github.com/sakthispgs/VSDsquadronmini_intern/assets/157115078/1a3edd12-338c-4ba9-9af9-a55d7460c0c1)
 ---
@@ -60,4 +60,4 @@ $ riscv64-unknown-elf-objdump -d filename.o | less
 ```
 ![Assembly code for Ofast command](https://github.com/sakthispgs/VSDsquadronmini_intern/assets/157115078/cdea39c3-8202-4fe5-985e-a7c7fcd53955)
 
-                                                  END OF TASK-1
+                                                  **END OF TASK-1**
