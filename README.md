@@ -74,7 +74,7 @@ $ riscv64-unknown-elf-objdump -d filename.o | less
 <details>
   <summary><b>Task 2: Compilation of C Program for creating a Smart Elevator Controller and RISC-V compilation</b></summary>
 
-  + __The task 2 involves write a C Program for creating a Smart Elevator Controller and we have to analyze RISC-V asssemby code for the above C code.__
+  + __The task 2 involves writing a C Program for creating a Smart Elevator Controller and we have to analyze RISC-V asssemby code for the above C code.__
 
 ##### Objective:
 The C code must implement a simple smart elevator controller, designed to handle basic elevator operations including floor requests, movement, and stopping at requested floors. This system simulates how a real-world elevator might function, focusing on simplicity and fundamental concepts.
@@ -97,3 +97,5 @@ The move_elevator function processes these requests, moving the elevator to the 
 The elevator checks for the nearest requested floor in the current direction.
 It moves to that floor, stops, and clears the request.
 If no requests are pending in the current direction, it changes direction and continues checking for requests.
+
+
