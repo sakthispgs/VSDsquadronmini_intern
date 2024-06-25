@@ -180,22 +180,15 @@ void stop_elevator(int floor) {
 
 ---
 
-#### __Explanation for above C code:__
-
-1.Constants: The 'MAX_FLOORS' constant defines the number of floors the elevator can service.
-
-2.Function Declarations: The 'request_floor', 'move_elevator', and 'stop_elevator' functions are declared to handle different parts of the elevator logic.
-
-3.Elevator State: Variables to keep track of the current floor, requests, and movement direction.
-
-4.Main Loop: Continuously accepts floor requests from the user until they input -1 to exit.
-
-5.Request Floor Function: Marks the requested floor as needing service.
-
-6.Move Elevator Function: Moves the elevator up or down based on requests, changing direction if no further requests are in 
-the current direction.
-
-7.Stop Elevator Function: Simulates the elevator stopping at the requested floor.
+#### __Detailed Steps of the Example:__
++ First Input: User requests floor 5.
+  Output: "Floor 5 requested."
+  Output: "Stopping at floor 5."
++ Second Input: User requests floor 2.
+  Output: "Floor 2 requested."
+  Output: "Stopping at floor 2."
++ Exit: User inputs -1 to exit.
+  Program terminates.
 
 ---
 
