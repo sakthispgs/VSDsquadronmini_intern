@@ -98,4 +98,86 @@ The elevator checks for the nearest requested floor in the current direction.
 It moves to that floor, stops, and clears the request.
 If no requests are pending in the current direction, it changes direction and continues checking for requests.
 
+---
+
++ The C code for a Smart Elevator Controller can be elaborated as further:
+```
+#include <stdio.h>
+#include <stdbool.h>
+
+// Constants
+#define MAX_FLOORS 10
+
+// Function declarations
+void request_floor(int floor);
+void move_elevator();
+void stop_elevator(int floor);
+
+// Elevator state
+int current_floor = 0;
+bool requests[MAX_FLOORS] = { false };
+bool moving_up = true;
+
+int main() {
+    int floor_request;
+
+    while (1) {
+        printf("Enter the floor number to request (0-%d) or -1 to exit: ", MAX_FLOORS - 1);
+        scanf("%d", &floor_request);
+
+        if (floor_request == -1) {
+            break;
+        } else if (floor_request >= 0 && floor_request < MAX_FLOORS) {
+            request_floor(floor_request);
+        } else {
+            printf("Invalid floor number. Please try again.\n");
+        }
+
+        move_elevator();
+    }
+
+    return 0;
+}
+
+void request_floor(int floor) {
+    requests[floor] = true;
+    printf("Floor %d requested.\n", floor);
+}
+
+void move_elevator() {
+    if (moving_up) {
+        for (int i = current_floor + 1; i < MAX_FLOORS; i++) {
+            if (requests[i]) {
+                current_floor = i;
+                requests[i] = false;
+                stop_elevator(i);
+                return;
+            }
+        }
+        moving_up = false;  // Change direction if no requests above
+    }
+
+    if (!moving_up) {
+        for (int i = current_floor - 1; i >= 0; i--) {
+            if (requests[i]) {
+                current_floor = i;
+                requests[i] = false;
+                stop_elevator(i);
+                return;
+            }
+        }
+        moving_up = true;  // Change direction if no requests below
+    }
+}
+
+void stop_elevator(int floor) {
+    printf("Stopping at floor %d.\n", floor);
+}
+```
+
+---
+
++ Output for the above C program can be displayed as:
+  
+![Screenshot 2024-06-25 105635](https://github.com/sakthispgs/VSDsquadronmini_intern/assets/157115078/a2c93947-3765-403e-8a8c-57eb5fbcbca4)
 
