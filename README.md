@@ -105,15 +105,12 @@ If no requests are pending in the current direction, it changes direction and co
 #include <stdio.h>
 #include <stdbool.h>
 
-// Constants
 #define MAX_FLOORS 10
 
-// Function declarations
 void request_floor(int floor);
 void move_elevator();
 void stop_elevator(int floor);
 
-// Elevator state
 int current_floor = 0;
 bool requests[MAX_FLOORS] = { false };
 bool moving_up = true;
@@ -154,7 +151,7 @@ void move_elevator() {
                 return;
             }
         }
-        moving_up = false;  // Change direction if no requests above
+        moving_up = false;  
     }
 
     if (!moving_up) {
@@ -166,7 +163,7 @@ void move_elevator() {
                 return;
             }
         }
-        moving_up = true;  // Change direction if no requests below
+        moving_up = true;  
     }
 }
 
