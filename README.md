@@ -209,4 +209,9 @@ $ ls -ltr filename.o
 
 ---
 
++ Assembly code for C program (/main-module)
+```
+$ riscv64-unknown-elf-objdump -d filename.o 
+$ riscv64-unknown-elf-objdump -d filename.o | less
+```
 
