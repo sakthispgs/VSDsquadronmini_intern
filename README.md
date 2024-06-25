@@ -243,3 +243,7 @@ $ riscv64-unknown-elf-objdump -d filename.o | less
 + The provided C code for a smart elevator controller is a foundational example of how an elevator system can be simulated using basic programming constructs. It offers a practical demonstration of state management, control flow, and user interaction, making it a valuable educational tool and a basis for further development and enhancement in more complex applications.
 
 ---
+
+**END OF TASK-2**
+
+---
