@@ -76,7 +76,7 @@ $ riscv64-unknown-elf-objdump -d filename.o | less
 
   + __The task 2 involves writing a C Program for creating a Smart Elevator Controller and we have to analyze RISC-V asssemby code for the above C code.__
 
-##### Objective:
+#### Objective:
 The C code must implement a simple smart elevator controller, designed to handle basic elevator operations including floor requests, movement, and stopping at requested floors. This system simulates how a real-world elevator might function, focusing on simplicity and fundamental concepts.
 
 #### Detailed Operation:
@@ -180,7 +180,7 @@ void stop_elevator(int floor) {
 
 ---
 
-__Explanation for above C code:__
+#### __Explanation for above C code:__
 
 1.Constants: The 'MAX_FLOORS' constant defines the number of floors the elevator can service.
 
