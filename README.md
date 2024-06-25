@@ -181,15 +181,14 @@ void stop_elevator(int floor) {
 ---
 
 #### __Detailed Steps of the Example:__
-+ First Input: User requests floor 5.
-  Output: "Floor 5 requested."
++ First Input: User requests floor 5.  
+  Output: "Floor 5 requested."  
   Output: "Stopping at floor 5."
-+ Second Input: User requests floor 2.
-  Output: "Floor 2 requested."
++ Second Input: User requests floor 2.   
+  Output: "Floor 2 requested."  
   Output: "Stopping at floor 2."
-+ Exit: User inputs -1 to exit.
++ Exit: User inputs -1 to exit.  
   Program terminates.
-
 ---
 
 + Display the content of a file by using  `cat smart_elevator.c` , where The cat command is a versatile companion for various file-related operations.
