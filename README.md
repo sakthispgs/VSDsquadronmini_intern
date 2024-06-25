@@ -191,6 +191,15 @@ void stop_elevator(int floor) {
   Program terminates.
 ---
 
+#### __Code Behavior:__
+
++ The elevator starts at floor 0.
++ The elevator handles requests sequentially, moving to the next requested floor in the direction it is currently moving.
++ When no further requests are in the current direction, it changes direction and checks for requests in the opposite direction.
++ The process continues until the user decides to exit by entering -1.
+
+---
+
 + Display the content of a file by using  `cat smart_elevator.c` , where The cat command is a versatile companion for various file-related operations.
   
 ![Screenshot 2024-06-25 110751](https://github.com/sakthispgs/VSDsquadronmini_intern/assets/157115078/457333e2-4346-4401-ac45-dcf55a0352bc)
@@ -226,5 +235,11 @@ $ riscv64-unknown-elf-objdump -d filename.o | less
 ```
 
 ![Screenshot 2024-06-25 112152](https://github.com/sakthispgs/VSDsquadronmini_intern/assets/157115078/b32e4d3c-3d41-43e2-9b73-05a389a28185)
+
+---
+
+#### __Conclusion:__
+
++ The provided C code for a smart elevator controller is a foundational example of how an elevator system can be simulated using basic programming constructs. It offers a practical demonstration of state management, control flow, and user interaction, making it a valuable educational tool and a basis for further development and enhancement in more complex applications.
 
 ---
