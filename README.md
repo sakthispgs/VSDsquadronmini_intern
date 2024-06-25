@@ -25,8 +25,7 @@ ___
 + 1-wire serial debug interface (SDI)
 ---
 <details>
-  <summary><b>Task 1: Installation and Setup</b></summary>
-## Task 1:
+  <summary><b>Task 1: Sample Program and RISC-V compilation</b></summary>
 __The task is to install the necessary tools for this internship such as Ubuntu on VMBox, Visual C++ and write a sample C code and analysing RISC asssemby code for the sample C code.__
 ___
 + Writing a C code to count sum of numbers from 1 to n using Leafpad as shown below.
