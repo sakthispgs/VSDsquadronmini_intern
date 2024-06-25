@@ -3,7 +3,7 @@
 
 ###### VSD squadron mini board
 
-<img align="left" width="250" height="250" src="https://github.com/sakthispgs/VSDsquadronmini_intern/assets/157115078/eb05f13c-0acb-4d20-b5cd-9c287286f0ac">
+<img align="left" width="500" height="500" src="https://github.com/sakthispgs/VSDsquadronmini_intern/assets/157115078/eb05f13c-0acb-4d20-b5cd-9c287286f0ac">
 
 ### Features
 ___
