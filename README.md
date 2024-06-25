@@ -66,3 +66,5 @@ $ riscv64-unknown-elf-objdump -d filename.o | less
 **END OF TASK-1**
 
 ---
+<details>
+  <summary><b>Task 2: Compilation of C Program for creating a Smart Elevator Controller and RISC-V compilation</b></summary>
