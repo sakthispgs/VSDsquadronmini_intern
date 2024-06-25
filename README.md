@@ -204,3 +204,9 @@ void stop_elevator(int floor) {
 $ riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o filename.o filename.c
 $ ls -ltr filename.o
 ```
+
+![Screenshot 2024-06-25 110810](https://github.com/sakthispgs/VSDsquadronmini_intern/assets/157115078/47c0e571-0a96-46cd-a249-49faf8d6b30d)
+
+---
+
+
