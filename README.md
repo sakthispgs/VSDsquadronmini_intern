@@ -209,9 +209,19 @@ $ ls -ltr filename.o
 
 ---
 
-+ Assembly code for C program (/main-module)
++ Assembly code of C program for '/main' module:
 ```
 $ riscv64-unknown-elf-objdump -d filename.o 
 $ riscv64-unknown-elf-objdump -d filename.o | less
+```
+
+![Screenshot 2024-06-25 111554](https://github.com/sakthispgs/VSDsquadronmini_intern/assets/157115078/58498d90-4712-4220-961b-d183503e4348)
+
+---
+
++ Assembly code of C program for 'Ofast' command:
+```
+$ riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o filename.o filename.c
+$ riscv64-unknown-elf-objdump -d filename.o | less 
 ```
 
