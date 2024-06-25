@@ -25,7 +25,9 @@ ___
 + 1-wire serial debug interface (SDI)
 ---
 <details>
-  <summary><b>Task 1: Sample Program and RISC-V compilation
+  <summary><b>
+    Task 1: Sample Program and RISC-V compilation
+</b></summary>
   
 __The task 1 consist of some of the basic installation operation of the necessary tools such as Ubuntu on VMBox, Visual C++. Then we have to write a sample C code and analysing RISC asssemby code for the sample C code.__
 ___
@@ -67,7 +69,6 @@ $ riscv64-unknown-elf-objdump -d filename.o | less
 
 ---
 
-</b></summary>
 
 <details>
   <summary><b>Task 2: Compilation of C Program for creating a Smart Elevator Controller and RISC-V compilation</b></summary>
