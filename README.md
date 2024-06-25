@@ -198,3 +198,10 @@ the current direction.
 7.Stop Elevator Function: Simulates the elevator stopping at the requested floor.
 
 ---
+
++ Display the content of a file by using  `cat smart_elevator.c` , where The cat command is a versatile companion for various file-related operations.
+  
+![Screenshot 2024-06-25 110751](https://github.com/sakthispgs/VSDsquadronmini_intern/assets/157115078/457333e2-4346-4401-ac45-dcf55a0352bc)
+
+---
+
