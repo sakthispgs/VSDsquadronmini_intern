@@ -197,3 +197,10 @@ void stop_elevator(int floor) {
 
 ---
 
+#### Running above program in RISC-V Simulator
++ Command for Compiling the Code using RISCV Compiler.
+
+```
+$ riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o filename.o filename.c
+$ ls -ltr filename.o
+```
