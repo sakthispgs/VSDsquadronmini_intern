@@ -3,7 +3,7 @@
 
 ###### VSD squadron mini board
 
-![WhatsApp Image 2024-06-23 at 12 07 37 PM](https://github.com/sakthispgs/VSDsquadronmini_intern/assets/157115078/eb05f13c-0acb-4d20-b5cd-9c287286f0ac) width='250' height='250'
+![WhatsApp Image 2024-06-23 at 12 07 37 PM](https://github.com/sakthispgs/VSDsquadronmini_intern/assets/157115078/eb05f13c-0acb-4d20-b5cd-9c287286f0ac)
 
 ### Features
 ___
@@ -24,7 +24,8 @@ ___
 + 64-bit chip unique ID
 + 1-wire serial debug interface (SDI)
 ---
-
+<details>
+  <summary><b>Task 1: Installation and Setup</b></summary>
 ## Task 1:
 __The task is to install the necessary tools for this internship such as Ubuntu on VMBox, Visual C++ and write a sample C code and analysing RISC asssemby code for the sample C code.__
 ___
