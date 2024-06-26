@@ -248,3 +248,20 @@ $ riscv64-unknown-elf-objdump -d filename.o | less
 
 ---
 </details>
+
+<details>
+  <summary><b>Task 3: Execution of SPIKE Simulation and verification with O1 and Ofast command along with running the RISC-V Objdmp.</b></summary>
+
+ + __The task 3 involves the execution of spike simulation and also consisting of debug of the Assembly code that is generated for the previous program.
+
+---
+
+   First of all we have to execute the program using the step by step process such as, calling the program through ```riscv64-unknown-elf-gcc -o1 -mabi=lp64 -march=rv64i -o smart_elevator.o smart_elevator.c```, then compile it by using commands such as ```gcc smart_elevator.c``` and  ```./a.out```.
+
+   Similarly again run the same program by using the spike simulation command such that ```spike pk smart_elevator.o``` .
+   
+   + One of the important goal is that output of both the simulation should return the same results as shown bellow.
+
+![output verification through spike](https://github.com/sakthispgs/VSDsquadronmini_intern/assets/157115078/b14c2769-3d20-46c8-ae93-69a88ddb9a02)
+
+---
