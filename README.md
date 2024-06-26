@@ -250,9 +250,9 @@ $ riscv64-unknown-elf-objdump -d filename.o | less
 </details>
 
 <details>
-  <summary><b>Task 3: Execution of SPIKE Simulation and verification with O1 and Ofast command along with running the RISC-V Objdmp.</b></summary>
+  <summary><b>Task 3: Execution of SPIKE Simulation and verification with O1 and Ofast command along with running the RISC-V.</b></summary>
 
- + __The task 3 involves the execution of spike simulation and also consisting of debug of the Assembly code that is generated for the previous program.
+ + __The task 3 involves the execution of spike simulation and also consisting of debug of the Assembly code that is generated for the previous program.__
 
 ---
 
@@ -265,3 +265,36 @@ $ riscv64-unknown-elf-objdump -d filename.o | less
 ![output verification through spike](https://github.com/sakthispgs/VSDsquadronmini_intern/assets/157115078/b14c2769-3d20-46c8-ae93-69a88ddb9a02)
 
 ---
+
++ Now we can access the Assembly code by using the command  ```riscv64-unknown-elf-objdump -d smart_elevator.o | less```.
+
+![Screenshot 2024-06-26 171251](https://github.com/sakthispgs/VSDsquadronmini_intern/assets/157115078/ef8d2dfb-1435-4ed2-9c37-23b9516a478e)
+
+---
+
+__DEBUG PROCESS using ASSEMBLY CODE:__
+
++ The process of debugging involves the command  ```spike -d pk smart_elevator```, which debug's the assembly code and we can access each of the register by calling the variable name which is provided on the code. For example sp-Stack Pointer , lui - Load Upper Immediate , addi - Add Immediate ,  sw - Store Word etc...
+  
+  Now to initiate the file location we may use the command  ```(spike) until pc 0 100b0``` and then press enter and also use the command ```(spike) reg 0 sp```.
+
+  ![debug assembly 1](https://github.com/sakthispgs/VSDsquadronmini_intern/assets/157115078/63f936fb-ab10-4156-aa60-478a53d927af)
+
++ Then the calculation of updation of the stack pointer can be done as following...
+
+   ![stack pointer calculation](https://github.com/sakthispgs/VSDsquadronmini_intern/assets/157115078/645c6785-e4ec-42f3-a671-fa3e8a670257)
+
+---
+
++ Further proceeding with the debug operation of the Assembly code as following..
+
+  ![Screenshot 2024-06-26 174621](https://github.com/sakthispgs/VSDsquadronmini_intern/assets/157115078/33435ea2-d201-4be4-a129-caa24e750f03)
+
+![Screenshot 2024-06-26 174855](https://github.com/sakthispgs/VSDsquadronmini_intern/assets/157115078/cdea8275-795f-4fee-a076-915ac4e17799)
+
+---
+
+**END OF TASK-3**
+
+---
+</details>
