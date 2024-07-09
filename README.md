@@ -72,7 +72,7 @@ $ riscv64-unknown-elf-objdump -d filename.o | less
 </details>
 
 <details>
-  <summary><b>Task 2: Compilation of C Program for creating a Smart Elevator Controller and RISC-V compilation</b></summary>
+  <summary><b>Task 2:Compilation of C Program for creating a Smart Elevator Controller and RISC-V compilation</b></summary>
 
   + __The task 2 involves writing a C Program for creating a Smart Elevator Controller and we have to analyze RISC-V asssemby code for the above C code.__
 
@@ -250,7 +250,7 @@ $ riscv64-unknown-elf-objdump -d filename.o | less
 </details>
 
 <details>
-  <summary><b>Task 3: Execution of SPIKE Simulation and verification with O1 and Ofast command along with running the RISC-V.</b></summary>
+  <summary><b>Task 3:Execution of SPIKE Simulation and verification with O1 & Ofast command along with running the RISC-V.</b></summary>
 
  + __The task 3 involves the execution of spike simulation and also consisting of debug of the Assembly code that is generated for the previous program.__
 
