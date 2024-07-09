@@ -654,3 +654,172 @@ Together, Icarus Verilog and GTKWave form a powerful combination for designing, 
 ---
 
 </details>  
+
+<details>
+  <summary><b>Task 6: Ascent Control Engineer: Implementation of a Smart Elevator Controller.</b></summary>
+
+### A Smart Elevator Controller:
+
+This task involves a Creating simple a smart elevator controller involves designing a system that can efficiently manage the movement of elevators in a building, ensuring optimal performance and user experience.
+
+
+------
+
+#### **Overview**
+
+>*A Smart Elevator Controller is a sophisticated system that enhances the efficiency, safety, and user experience of elevator operations within a building. It leverages advanced technologies and intelligent algorithms to optimize elevator movement and coordination. This controller efficiently assigns elevators to service calls, minimizing wait times and reducing congestion by coordinating multiple elevators.
+The Smart Elevator Controller also emphasizes energy efficiency, utilizing regenerative braking and smart standby modes to reduce energy consumption. Communication systems within the controller integrate seamlessly with building management systems, enabling real-time monitoring and control. Advanced features like predictive maintenance and remote monitoring further enhance the functionality and reliability of the system, making it a key component in modern, intelligent building management.*
+
+---
+
+#### **Components required**
+
+1.VSDSquadron Mini: To control the logic and operation of the elevator. 
+ 
+2.Sensors: To detect the elevator's position at different floors.
+
+3.Actuators:
+  + DC Motor or Stepper Motor: To drive the elevator up and down.
+  + Motor Driver: To control the motor based on microcontroller commands.
+
+4.Power Supply: Ensure a stable power source for the microcontroller and motors.
+
+5.7-Segment Displays: To show the current floor.
+
+6.Push Buttons: For users to input floor selection and call the elevator.
+
+7.Breadboard and Jumper Wires: For prototyping the circuit.    
+
+---
+
+#### **Pinout diagram for Elevator Controller**
+
+![Presentation1](https://github.com/sakthispgs/VSDsquadronmini_intern/assets/157115078/9bf88412-1a88-4026-bb76-0e701e4d4a31)
+
++ The circuit connection diagram for the elevator controller system features a VSDSquadron Mini board interfacing with a proximity sensor, a motor driver, an LCD display, and a stepper motor. The VSDSquadron Mini board is powered through its VIN pin connected to a power supply, with a common ground (GND) shared among all components. The proximity sensor connects its VCC pin to the power supply, its GND pin to the common ground, and its output pin to the PC0 pin of the VSDSquadron Mini. For motor control, the motor driver is linked to the VSDSquadron Mini via the STEP and DIRECTION pins connected to PD0 and PD1 respectively. The motor driver's VDD pin is connected to a stable power supply, with its GND pin connected to the common ground. The motor driver's output pins (1A, 2A, STEP, and VMOT) are connected to the corresponding coils of the stepper motor. Additionally, the LCD display receives power from the VCC pin and shares the common ground. The control pins of the LCD display (E, RS, D3, D6, and D7) are connected to PC1, PC2, and PC3 pins of the VSDSquadron Mini, enabling the display to provide feedback on the elevator's status. This setup allows the VSDSquadron Mini to process inputs from the proximity sensor and user commands, control the stepper motor via the motor driver, and display relevant information on the LCD screen.
+
+---
+
+#### **Simplified Table for Elevator Controller**
++ Since the elevator controller operates based on state changes driven by the clock, a complete truth table for all possible input combinations would be extensive. However, we can illustrate a simplified version capturing the primary states and transitions:
+
+|clk|reset|floor_request|request_valid|current_floor(prev)|moving_up(prev)|stop (prev)|current_floor (next)|moving_up (next)|stop(next)|
+|--|---|--------|---------|--------|--------|--------|--------|-------|---------|
+|0|1|X|X|X|X|X|0|1|0|
+|1|0|3|1|0|1|0|3|1|1|
+|2|0|1|1|3|1|1|3|1|0|
+|3|0|X|0|3|1|0|1|0|1|
+|4|0|5|1|1|0|1|5|1|1|
+|5|0|7|1|5|1|1|7|1|1|
+|6|0|X|0|7|1|1|7|0|0|
+
+---
+
+#### **How to Program?**
+
++ Here's the code for an embedded C environment, such as running on a microcontroller like the VSDSquadron Mini. This version assumes that the microcontroller is using standard libraries and functions for handling inputs and outputs, which you may need to adapt depending on your specific platform and setup.
+
+```
+#include <ch32v00x.h> 
+#include <stdbool.h>
+#include <stdint.h>
+#include "microcontroller_library.h" // Placeholder for the actual library header
+
+#define MAX_FLOORS 10
+
+void request_floor(uint8_t floor);
+void move_elevator();
+void stop_elevator(uint8_t floor);
+void setup_pins();
+uint8_t read_floor_request();
+
+uint8_t current_floor = 0;
+bool requests[MAX_FLOORS] = { false };
+bool moving_up = true;
+
+int main() {
+    uint8_t floor_request;
+    
+    setup_pins();
+    
+    while (1) {
+        floor_request = read_floor_request();
+
+        if (floor_request < MAX_FLOORS) {
+            request_floor(floor_request);
+        }
+
+        move_elevator();
+    }
+
+    return 0;
+}
+
+void request_floor(uint8_t floor) {
+    requests[floor] = true;
+    // Replace with actual function to display floor request
+    microcontroller_display_message("Floor %d requested.\n", floor);
+}
+
+void move_elevator() {
+    if (moving_up) {
+        for (uint8_t i = current_floor + 1; i < MAX_FLOORS; i++) {
+            if (requests[i]) {
+                current_floor = i;
+                requests[i] = false;
+                stop_elevator(i);
+                return;
+            }
+        }
+        moving_up = false;  
+    }
+
+    if (!moving_up) {
+        for (int8_t i = current_floor - 1; i >= 0; i--) {
+            if (requests[i]) {
+                current_floor = i;
+                requests[i] = false;
+                stop_elevator(i);
+                return;
+            }
+        }
+        moving_up = true;  
+    }
+}
+
+void stop_elevator(uint8_t floor) {
+    // Replace with actual function to display stopping message
+    microcontroller_display_message("Stopping at floor %d.\n", floor);
+}
+
+void setup_pins() {
+    // Setup code for microcontroller pins
+    // Example: setting up GPIO pins for buttons, LEDs, motor driver, etc.
+    microcontroller_setup_pin(FLOOR_REQUEST_PIN, INPUT);
+    microcontroller_setup_pin(ELEVATOR_MOTOR_PIN1, OUTPUT);
+    microcontroller_setup_pin(ELEVATOR_MOTOR_PIN2, OUTPUT);
+    microcontroller_setup_pin(LED_DISPLAY_PIN, OUTPUT);
+    // Add additional setup as needed
+}
+
+uint8_t read_floor_request() {
+    // Example code to read a floor request from a button or sensor
+    // Replace with actual function to read input from hardware
+    if (microcontroller_button_pressed(FLOOR_BUTTON_0)) return 0;
+    if (microcontroller_button_pressed(FLOOR_BUTTON_1)) return 1;
+    if (microcontroller_button_pressed(FLOOR_BUTTON_2)) return 2;
+    // Add additional floor buttons as needed
+
+    return MAX_FLOORS; // Return an invalid floor number if no request
+}
+```
+
+---
+
+END OF TASK-6
+
+---
+
+</details>   
+
+
