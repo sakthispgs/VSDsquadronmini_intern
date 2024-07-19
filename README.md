@@ -813,7 +813,13 @@ uint8_t read_floor_request() {
     return MAX_FLOORS; // Return an invalid floor number if no request
 }
 ```
+---
 
+### **DEMO OF THE PROJECT**
+
++ Let us see the demonstartion video of the `smart elevator controller`.
+  
+(https://github.com/user-attachments/assets/149e8021-da6b-48ba-8dff-8b524efd44cc)
 ---
 
 END OF TASK-6
