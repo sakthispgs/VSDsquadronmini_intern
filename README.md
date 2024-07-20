@@ -819,7 +819,8 @@ uint8_t read_floor_request() {
 
 + Let us see the demonstartion video of the `smart elevator controller`.
   
-(https://github.com/user-attachments/assets/149e8021-da6b-48ba-8dff-8b524efd44cc)
+https://drive.google.com/drive/folders/1-BmfZaoPJF0Hx-y5yixJ5t4dZMfD-DYo?usp=sharing
+
 ---
 
 END OF TASK-6
