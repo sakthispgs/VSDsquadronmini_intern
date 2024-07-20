@@ -819,7 +819,7 @@ uint8_t read_floor_request() {
 
 + Let us see the demonstartion video of the `smart elevator controller`.
   
-https://drive.google.com/drive/folders/1-BmfZaoPJF0Hx-y5yixJ5t4dZMfD-DYo?usp=sharing
+https://drive.google.com/file/d/1qz_2zk7IQs6bCm8zGzmr4WZ5lJML0V7k/view?usp=sharing
 
 ---
 
