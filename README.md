@@ -815,7 +815,10 @@ uint8_t read_floor_request() {
 ```
 ---
 
-### **DEMO OF THE PROJECT**
+</details>   
+
+<details>
+  <summary><b>Task 7:DEMO OF THE PROJECT.</b></summary>
 
 + Let us see the demonstartion video of the `smart elevator controller`.
   
@@ -823,10 +826,8 @@ https://drive.google.com/file/d/1tkWmdeXHC6wOH6gGidFapYji2ltGmC-j/view?usp=shari
 
 ---
 
-END OF TASK-6
+END OF TASK-7
 
 ---
 
 </details>   
-
-
